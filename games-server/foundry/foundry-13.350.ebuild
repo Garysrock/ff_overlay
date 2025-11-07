@@ -24,6 +24,16 @@ RDEPEND="${DEPEND}"
 BDEPEND="acct-user/foundry
 	acct-group/foundry"
 
+pkg_nofetch() {
+	einfo "You must log into your account on https://foundryvtt.com"
+	einfo "and go to your \"Purchased Licenses\" page under your user"
+	einfo "profile. There you must select the Download Version ${PV}"
+	einfo "with Operating System of \"Node.js\". Then either Download"
+	einfo "and Transfer to ${DISTDIR} on this computer, or select"
+	einfo "\"Timed URL\" and execute:"
+	einfo " sudo wget -O ${DISTDIR}/FoundryVTT-Node-${PV}.zip <pasted_URL>"
+}
+
 src_unpack() {
 	mkdir ${S}
 	cd ${S}
