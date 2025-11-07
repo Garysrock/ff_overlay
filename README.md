@@ -1,1 +1,3 @@
 # ff_overlay
+
+This is the Gentoo overlay from Finding Foundry for the Foundry VTT software.
