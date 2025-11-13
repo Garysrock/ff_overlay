@@ -17,7 +17,6 @@ SLOT="${MY_MAJOR}"
 KEYWORDS="~amd64"
 
 DEPEND=">=net-libs/nodejs-20
-	!=net-libs/nodejs-21
 	acct-user/foundry
 	acct-group/foundry"
 RDEPEND="${DEPEND}"
