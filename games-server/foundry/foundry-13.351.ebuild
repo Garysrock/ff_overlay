@@ -10,7 +10,7 @@ MY_MAJOR=$(ver_cut 1)
 DESCRIPTION="The Foundry VTT Server"
 HOMEPAGE="https://foundryvtt.com/"
 SRC_URI="FoundryVTT-Node-${PV}.zip"
-RESTRICT="fetch"
+RESTRICT="fetch strip bindist"
 
 LICENSE="Foundry_VTT_License"
 SLOT="${MY_MAJOR}"
