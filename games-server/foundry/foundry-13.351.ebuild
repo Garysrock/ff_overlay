@@ -28,9 +28,11 @@ pkg_nofetch() {
 	einfo "and go to your \"Purchased Licenses\" page under your user"
 	einfo "profile. There you must select the Download Version ${PV}"
 	einfo "with Operating System of \"Node.js\". Then either Download"
-	einfo "and Transfer to ${DISTDIR} on this computer, or select"
-	einfo "\"Timed URL\" and execute:"
-	einfo " sudo wget -O ${DISTDIR}/FoundryVTT-Node-${PV}.zip <pasted_URL>"
+	einfo "and Transfer to \${DISTDIR} (usually /var/cache/distfiles"
+	einfo "on this computer, or select \"Timed URL\" and execute:"
+	einfo " sudo wget -O \${DISTDIR}/FoundryVTT-Node-${PV}.zip <pasted_URL>"
+	einfo "If you need to determine what \${DISTDIR} is, try:"
+	einfo " sudo emerge --info |grep DISTDIR"
 }
 
 src_unpack() {
