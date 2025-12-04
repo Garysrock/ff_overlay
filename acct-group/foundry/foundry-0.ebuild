@@ -8,5 +8,5 @@ inherit acct-group
 
 DESCRIPTION="A group for the Foundry VTT server"
 
-ACCT_GROUP_ID=
+ACCT_GROUP_ID=-1
 
