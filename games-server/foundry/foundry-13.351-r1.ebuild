@@ -53,11 +53,15 @@ src_install() {
 }
 
 pkg_postinst() {
-	[[ -d /var/cache/foundry-data ]] || mkdir /var/cache/foundry-data
-	if [[ ! -d /var/cache/foundry-data ]]; then
-		ewarn  "Unable to create Foundry's data directory"
-		eerror "Please verify that /var/cache/foundry-data is available for use."
+	if [[ -d /var/cache/foundry-data ]]; then
+		ewarn "Legacy directory \"/var/cache/foundry-data\" exists. Please move to /var/foundry."
+	else
+		[[ -d /var/foundry ]] || mkdir /var/cache/foundry-data
+		if [[ ! -d /var/foundry ]]; then
+			ewarn  "Unable to create Foundry's data directory"
+			eerror "Please verify that /var/cache/foundry-data is available for use."
+		fi
+		chown foundry:foundry /var/foundry
 	fi
-	chown foundry:foundry /var/cache/foundry-data
 }
 
