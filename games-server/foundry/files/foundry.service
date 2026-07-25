@@ -6,7 +6,7 @@ After=network.target
 WantedBy=multi-user.target
 
 [Service]
-ExecStart=/usr/bin/node /opt/bin/foundry.js --dataPath=/var/cache/foundry-data/%i
+ExecStart=/usr/bin/node /opt/bin/foundry.js --dataPath=/var/foundry/%i
 Type=exec
 Restart=always
 User=foundry
