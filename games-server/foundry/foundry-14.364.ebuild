@@ -16,7 +16,7 @@ LICENSE="Foundry_VTT_License"
 SLOT="${MY_MAJOR}"
 KEYWORDS="~amd64"
 
-DEPEND=">=net-libs/nodejs-20
+DEPEND=">=net-libs/nodejs-24
 	acct-user/foundry
 	acct-group/foundry"
 RDEPEND="${DEPEND}"
